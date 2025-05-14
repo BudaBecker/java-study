@@ -1,20 +1,22 @@
 package entities;
 
-public class Products {
+public class Product {
     
     private String name;
     private double price;
     private int quantity;
 
     // Constructors
-    public Products(String name, double price, int quantity) {
+    public Product(String name, double price, int quantity) {
         this.name = name;
         this.price = price;
         this.quantity = quantity;
     }
-    public Products(String name, double price) {
+
+    public Product(String name, double price) {
         this.name = name;
         this.price = price;
+        this.quantity = 0;
     }
 
     // Getters and Setters
@@ -37,23 +39,31 @@ public class Products {
         this.quantity = quantity;
     }
 
-    // Methods
+    // Business Methods
     public double totalValueInStock() {
-        return price*quantity;
+        return price * quantity;
     }
+
     public void addProducts(int quantity){
         this.quantity += quantity;
     }
+
     public void removeProducts(int quantity){
-        this.quantity -= quantity;
+        if (quantity <= this.quantity) {
+            this.quantity -= quantity;
+        } else {
+            System.out.println("Not enough stock to remove that many products.");
+        }
     }
+
+    @Override
     public String toString(){
-        return this.name
+        return name
             + ", $"
-            + String.format("%.2f", this.price)
+            + String.format("%.2f", price)
             + ", "
-            + this.quantity
-            + " units, Total: "
-            + String.format("%.2f", this.totalValueInStock());
+            + quantity
+            + " units, Total: $"
+            + String.format("%.2f", totalValueInStock());
     }
 }

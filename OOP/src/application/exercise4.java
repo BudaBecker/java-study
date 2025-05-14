@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import util.Dolar;
 
-public class exercice4 {
+public class exercise4 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);

@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import entities.Employee;
 
-public class exercice2 {
+public class exercise2 {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);

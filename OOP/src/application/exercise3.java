@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 import entities.Student;
 
-public class exercice3 {
+public class exercise3 {
 
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
