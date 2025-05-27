@@ -1,6 +1,6 @@
 package model.entities;
 
-public class Product {
+public class Product implements Comparable<Product>{
     
     protected String name;
     protected Double price;
@@ -33,5 +33,17 @@ public class Product {
         return name 
 			+ " $" 
 			+ String.format("%.2f", price);
+    }
+
+    @Override
+    public String toString() {
+        return name 
+			+ ", " 
+			+ String.format("%.2f", price);
+    }
+
+    @Override
+    public int compareTo(Product o) {
+        return price.compareTo(o.getPrice());
     }
 }
