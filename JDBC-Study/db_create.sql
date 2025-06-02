@@ -3,18 +3,18 @@ CREATE DATABASE jdbctest;
 USE jdbctest;
 
 CREATE TABLE department (
-  Id int NOT NULL AUTO_INCREMENT,
-  Name varchar(60) DEFAULT NULL,
+  Id INT NOT NULL AUTO_INCREMENT,
+  Name VARCHAR(60) DEFAULT NULL,
   PRIMARY KEY (Id)
 );
 
 CREATE TABLE seller (
-  Id int NOT NULL AUTO_INCREMENT,
-  Name varchar(60) NOT NULL,
-  Email varchar(100) NOT NULL,
-  BirthDate datetime NOT NULL,
-  BaseSalary double NOT NULL,
-  DepartmentId int NOT NULL,
+  Id INT NOT NULL AUTO_INCREMENT,
+  Name VARCHAR(60) NOT NULL,
+  Email VARCHAR(100) NOT NULL,
+  BirthDate DATETIME NOT NULL,
+  BaseSalary DOUBLE NOT NULL,
+  DepartmentId INT NOT NULL,
   PRIMARY KEY (Id),
   FOREIGN KEY (DepartmentId) REFERENCES department(id)
 );
