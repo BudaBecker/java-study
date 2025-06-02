@@ -1,11 +1,11 @@
 package model.entities;
 
-public class Product implements Comparable<Product>{
-    
+public class Product implements Comparable<Product> {
+
     protected String name;
     protected Double price;
 
-    public Product(){
+    public Product() {
     }
 
     public Product(String name, Double price) {
@@ -29,17 +29,17 @@ public class Product implements Comparable<Product>{
         this.price = price;
     }
 
-    public String priceTag(){
-        return name 
-			+ " $" 
-			+ String.format("%.2f", price);
+    public String priceTag() {
+        return name
+                + " $"
+                + String.format("%.2f", price);
     }
 
     @Override
     public String toString() {
-        return name 
-			+ ", " 
-			+ String.format("%.2f", price);
+        return name
+                + ", "
+                + String.format("%.2f", price);
     }
 
     @Override
