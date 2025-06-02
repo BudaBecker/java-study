@@ -28,6 +28,9 @@ public class UpdateData {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        } finally {
+            DB.closeStatement(st);
+            DB.closeConnection();
         }
     }
 }
