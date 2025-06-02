@@ -1,6 +1,7 @@
 DROP DATABASE jdbctest;
 CREATE DATABASE jdbctest;
 USE jdbctest;
+
 CREATE TABLE department (
   Id int NOT NULL AUTO_INCREMENT,
   Name varchar(60) DEFAULT NULL,
